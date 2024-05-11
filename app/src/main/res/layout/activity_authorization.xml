@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:layout_editor_absoluteX="-48dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/text_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/logo"
+
+            android:fontFamily="@font/comfortaa_light"
+            android:paddingLeft="@dimen/side_margins"
+            android:paddingTop="100dp"
+            android:paddingRight="32dp"
+            android:text="@string/name_logo"
+            android:textColor="@color/black"
+            android:textSize="38dp"
+            android:textStyle="bold|italic"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/forms"
+            android:layout_width="364dp"
+            android:layout_height="439dp"
+            android:layout_below="@id/text_log"
+            android:layout_margin="32dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:id="@+id/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/comfortaa_light"
+                android:paddingLeft="54dp"
+                android:paddingTop="32dp"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+
+                android:shadowDy="4"
+                android:text="Авторизация"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                android:textStyle="bold|italic" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="112dp">
+
+                <TableRow
+                    android:layout_marginLeft="@dimen/side_forms_lefandrig"
+                    android:layout_marginRight="@dimen/side_forms_lefandrig"
+                    android:background="@drawable/input_log">
+
+                    <EditText
+
+                        android:layout_width="249dp"
+                        android:layout_height="49dp"
+
+                        android:layout_marginRight="110dp"
+                        android:background="@null"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:hint="@string/loginText"
+
+                        android:paddingLeft="21dp"
+
+                        android:textColor="@color/ForRegistrandAuto"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="@dimen/side_forms_lefandrig"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/side_forms_lefandrig"
+                    android:background="@drawable/input_log">
+
+                    <EditText
+                        android:layout_width="296dp"
+                        android:layout_height="49dp"
+
+                        android:layout_marginRight="110dp"
+                        android:background="@null"
+                        android:fontFamily="@font/comfortaa_light"
+
+                        android:hint="@string/passwordText"
+                        android:paddingLeft="21dp"
+                        android:textColor="@color/ForRegistrandAuto"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="14dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Запомнить меня"
+                        android:textSize="20dp"></CheckBox>
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnVoitiAuto"
+                            android:layout_width="294dp"
+                            android:layout_height="53dp"
+
+                            android:backgroundTint="#903BE260"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:onClick="onClick"
+
+                            android:text="Войти"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="48dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/forms"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnRegAuto"
+                            android:layout_width="291dp"
+                            android:layout_height="53dp"
+
+                            android:layout_marginTop="10dp"
+
+                            android:backgroundTint="#70F9F6F6"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:onClick="onClick"
+
+                            android:text="Регистрация"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/bottomFons"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_below="@id/forms"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="117dp"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:background="@color/white"></RelativeLayout>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/forms"-->
+<!--                android:layout_marginHorizontal="@dimen/side_forms_lefandrig"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="Войти с"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="36sp" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="117dp"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:background="@color/white"></RelativeLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/bottomFons"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/iconRazmer"-->
+<!--                android:layout_height="@dimen/iconRazmer"-->
+<!--                android:layout_marginLeft="65dp"-->
+<!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+<!--                android:src="@drawable/logo_google" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/iconRazmer"-->
+<!--                android:layout_height="@dimen/iconRazmer"-->
+<!--                android:layout_marginLeft="@dimen/margLeft"-->
+<!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+<!--                android:src="@drawable/vk_logo" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/iconRazmer"-->
+<!--                android:layout_height="@dimen/iconRazmer"-->
+<!--                android:layout_marginLeft="@dimen/margLeft"-->
+<!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+<!--                android:src="@drawable/notion_logo" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/iconRazmer"-->
+<!--                android:layout_height="@dimen/iconRazmer"-->
+<!--                android:layout_marginLeft="@dimen/margLeft"-->
+<!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+<!--                android:src="@drawable/github_logo" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/iconRazmer"-->
+<!--                android:layout_height="@dimen/iconRazmer"-->
+<!--                android:layout_marginLeft="@dimen/margLeft"-->
+<!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+<!--                android:layout_marginRight="60dp"-->
+<!--                android:src="@drawable/disc_logo" />-->
+
+<!--        </LinearLayout>-->
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

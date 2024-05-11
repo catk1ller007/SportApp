@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="side_margins"> 54dp </dimen>
+    <dimen name="side_forms_lefandrig">20dp</dimen>
+    <dimen name="margTop_inRegiandAuto">32dp</dimen>
+    <dimen name="margLeft">15dp</dimen>
+    <dimen name="iconRazmer">42dp</dimen>
+</resources>

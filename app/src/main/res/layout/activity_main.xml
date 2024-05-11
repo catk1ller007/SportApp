@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/text_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/logo"
+
+            android:fontFamily="@font/comfortaa_light"
+            android:paddingLeft="@dimen/side_margins"
+            android:paddingTop="100dp"
+            android:paddingRight="32dp"
+            android:text="@string/name_logo"
+            android:textColor="@color/black"
+            android:textSize="38dp"
+            android:textStyle="bold|italic"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/forms"
+            android:layout_width="346dp"
+            android:layout_height="476dp"
+            android:layout_below="@id/text_log"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:id="@+id/registration_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/comfortaa_light"
+                android:paddingLeft="54dp"
+                android:paddingTop="32dp"
+                android:text="Регистрация"
+                android:textColor="@color/black"
+
+                android:textSize="32dp"
+                android:textStyle="bold|italic" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="112dp">
+
+                <TableRow
+                    android:layout_marginLeft="@dimen/side_forms_lefandrig"
+                    android:layout_marginRight="@dimen/side_forms_lefandrig"
+                    android:background="@drawable/input_log">
+
+                    <EditText
+
+                        android:id="@+id/loginReg"
+                        android:layout_width="279dp"
+
+                        android:layout_height="49dp"
+                        android:background="@null"
+                        android:fontFamily="@font/comfortaa_light"
+
+                        android:hint="Логин"
+
+                        android:paddingLeft="21dp"
+                        android:textColor="@color/ForRegistrandAuto"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="@dimen/side_forms_lefandrig"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/side_forms_lefandrig"
+                    android:background="@drawable/input_log">
+
+                    <EditText
+                        android:id="@+id/nickname"
+                        android:layout_width="295dp"
+
+                        android:layout_height="49dp"
+                        android:layout_marginRight="55dp"
+                        android:background="@null"
+                        android:fontFamily="@font/comfortaa_light"
+
+                        android:hint="@string/nameText"
+                        android:paddingLeft="21dp"
+                        android:textColor="@color/ForRegistrandAuto"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="@dimen/side_forms_lefandrig"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/side_forms_lefandrig"
+                    android:background="@drawable/input_log">
+
+                    <EditText
+                        android:id="@+id/passwordReg"
+                        android:layout_width="295dp"
+
+                        android:layout_height="49dp"
+                        android:layout_marginRight="55dp"
+                        android:background="@null"
+                        android:fontFamily="@font/comfortaa_light"
+
+                        android:hint="@string/passwordText"
+                        android:paddingLeft="21dp"
+                        android:textColor="@color/ForRegistrandAuto"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="307dp"
+                    android:layout_marginLeft="@dimen/side_forms_lefandrig"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/side_forms_lefandrig"
+                    android:background="@drawable/input_log">
+
+                    <EditText
+                        android:id="@+id/reppassReq"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="49dp"
+                        android:layout_marginRight="55dp"
+                        android:background="@null"
+                        android:fontFamily="@font/comfortaa_light"
+
+                        android:hint="Повторите пароль"
+                        android:paddingLeft="21dp"
+                        android:textColor="@color/ForRegistrandAuto"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btnVoiti"
+                        android:layout_width="177dp"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="25dp"
+
+                        android:layout_marginRight="50dp"
+                        android:backgroundTint="#903BE260"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:onClick="onClick"
+
+                        android:text="Войти"
+                        android:textSize="20dp" />
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/bottomFons"-->
+        <!--            android:layout_below="@id/forms"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:orientation="horizontal">-->
+        <!--            <RelativeLayout-->
+        <!--                android:layout_marginTop="45dp"-->
+        <!--                android:layout_width="117dp"-->
+        <!--                android:layout_height="1dp"-->
+        <!--                android:background="@color/white">-->
+        <!--            </RelativeLayout>-->
+
+        <!--            <TextView-->
+        <!--                android:layout_marginHorizontal="@dimen/side_forms_lefandrig"-->
+
+        <!--                android:layout_marginTop="20dp"-->
+        <!--                android:layout_below="@id/forms"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Войти с"-->
+        <!--                android:textSize="36sp"-->
+        <!--                android:textColor="@color/black"/>-->
+
+        <!--            <RelativeLayout-->
+        <!--                android:layout_marginLeft="5dp"-->
+        <!--                android:layout_marginTop="45dp"-->
+        <!--                android:layout_width="117dp"-->
+        <!--                android:layout_height="1dp"-->
+        <!--                android:background="@color/white">-->
+        <!--            </RelativeLayout>-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_below="@id/bottomFons"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            >-->
+
+        <!--            <ImageView-->
+        <!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+        <!--                android:layout_width="@dimen/iconRazmer"-->
+        <!--                android:layout_height="@dimen/iconRazmer"-->
+        <!--                android:src="@drawable/logo_google"-->
+        <!--                android:layout_marginLeft="65dp"-->
+        <!--                />-->
+
+        <!--            <ImageView-->
+        <!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+        <!--                android:layout_width="@dimen/iconRazmer"-->
+        <!--                android:layout_height="@dimen/iconRazmer"-->
+        <!--                android:src="@drawable/vk_logo"-->
+        <!--                android:layout_marginLeft="@dimen/margLeft"-->
+        <!--                />-->
+        <!--            <ImageView-->
+        <!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+        <!--                android:layout_width="@dimen/iconRazmer"-->
+        <!--                android:layout_height="@dimen/iconRazmer"-->
+        <!--                android:src="@drawable/notion_logo"-->
+        <!--                android:layout_marginLeft="@dimen/margLeft"-->
+        <!--                />-->
+        <!--            <ImageView-->
+        <!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+        <!--                android:layout_width="@dimen/iconRazmer"-->
+        <!--                android:layout_height="@dimen/iconRazmer"-->
+        <!--                android:src="@drawable/github_logo"-->
+        <!--                android:layout_marginLeft="@dimen/margLeft"-->
+        <!--                />-->
+        <!--            <ImageView-->
+        <!--                android:layout_marginTop="@dimen/margTop_inRegiandAuto"-->
+        <!--                android:layout_width="@dimen/iconRazmer"-->
+        <!--                android:layout_height="@dimen/iconRazmer"-->
+        <!--                android:src="@drawable/disc_logo"-->
+        <!--                android:layout_marginLeft="@dimen/margLeft"-->
+        <!--                android:layout_marginRight="60dp"-->
+        <!--                />-->
+
+        <!--        </LinearLayout>-->
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

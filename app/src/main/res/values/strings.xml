@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SportApp</string>
+    <string name="name_logo">NaSportike</string>
+    <string name="loginText">Логин</string>
+    <string name="passwordText">Пароль</string>
+    <string name="nameText">Имя</string>
+</resources>

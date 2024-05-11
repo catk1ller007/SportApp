@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние элемента, когда он нажат -->
+    <item android:color="#FF0000" android:state_pressed="true" />
+    <!-- Состояние элемента, когда он активен -->
+    <item android:color="#FF0000" android:state_checked="true" />
+    <!-- Состояние элемента, когда он не нажат и не активен -->
+    <item android:color="#000000" />
+</selector>
