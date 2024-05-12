@@ -12,4 +12,6 @@ data class Item(
     var  name: String,
     @ColumnInfo(name =  "Email")
     var  email: String,
+    @ColumnInfo(name =  "Password")
+    var  password: String,
 )

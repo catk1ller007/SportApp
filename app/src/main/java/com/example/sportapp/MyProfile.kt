@@ -12,13 +12,14 @@ class MyProfile : AppCompatActivity() {
         setContentView(R.layout.activity_my_profile)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.button_navigation)
-        BottomNavigationHandler.setupBottomNavigation(bottomNavigationView)
 
-        val nickame = intent.getStringExtra("NICKNAME_EXTRA")
+        BottomNavigationHandler.setupBottomNavigation(bottomNavigationView, this)
+
+        val nickname = intent.getStringExtra("NICKNAME_EXTRA")
         val login = intent.getStringExtra("LOGIN_EXTRA")
 
         val fioTextView = findViewById<TextView>(R.id.FIO)
-        fioTextView.text = "ФИО: $nickame"
+        fioTextView.text = "ФИО: $nickname"
 
         val logiTextView = findViewById<TextView>(R.id.LOGIN)
         logiTextView.text = "Почта: $login"

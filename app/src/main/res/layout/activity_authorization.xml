@@ -70,16 +70,17 @@
 
                     <EditText
 
+                        android:id="@+id/loginEditText"
                         android:layout_width="249dp"
-                        android:layout_height="49dp"
 
+                        android:layout_height="49dp"
                         android:layout_marginRight="110dp"
                         android:background="@null"
                         android:fontFamily="@font/comfortaa_light"
+
                         android:hint="@string/loginText"
 
                         android:paddingLeft="21dp"
-
                         android:textColor="@color/ForRegistrandAuto"
                         android:textSize="16sp" />
 
@@ -92,13 +93,14 @@
                     android:background="@drawable/input_log">
 
                     <EditText
+                        android:id="@+id/passwordEditText"
                         android:layout_width="296dp"
-                        android:layout_height="49dp"
 
+                        android:layout_height="49dp"
                         android:layout_marginRight="110dp"
                         android:background="@null"
-                        android:fontFamily="@font/comfortaa_light"
 
+                        android:fontFamily="@font/comfortaa_light"
                         android:hint="@string/passwordText"
                         android:paddingLeft="21dp"
                         android:textColor="@color/ForRegistrandAuto"

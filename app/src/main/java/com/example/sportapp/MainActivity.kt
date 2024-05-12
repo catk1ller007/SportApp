@@ -8,16 +8,16 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.sportapp.DB.Item
 import com.example.sportapp.DB.MainDB
-import com.example.sportapp.databinding.ActivityMainBinding
+import com.example.sportapp.databinding.ActivityRegistrationBinding
 import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var blinding: ActivityMainBinding
+    private lateinit var blinding: ActivityRegistrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        blinding = ActivityMainBinding.inflate(layoutInflater)
+        blinding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(blinding.root)
 
         val db = MainDB.getDb(this)
@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
             val item = Item(
                 null,
                 blinding.nickname.text.toString(),
-                blinding.loginReg.text.toString()
+                blinding.loginReg.text.toString(),
+                blinding.passwordReg.text.toString()
             )
             if (secondPassword.text.toString() == blinding.passwordReg.text.toString()
                 && secondPassword.text.isNotEmpty()
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 }.start()
 
                 // Создаю intent, для перехода на другую страницу и передачу логина в профиль
-                val intent = Intent(this, MyProfile::class.java)
+                val intent = Intent(this, Authorization::class.java)
 
                 intent.putExtra("LOGIN_EXTRA", blinding.loginReg.text.toString())
                 intent.putExtra("NICKNAME_EXTRA", blinding.nickname.text.toString())

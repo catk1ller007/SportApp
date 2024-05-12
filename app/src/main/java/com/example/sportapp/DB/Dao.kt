@@ -10,4 +10,6 @@ interface Dao {
     fun insertItem(item: Item)
     @Query("SELECT * FROM items")
     fun getData(): List<Item>
+    @Query("SELECT * FROM items WHERE Email = :login AND Password = :password")
+    fun getUserByLoginAndPassword(login: String, password: String): Item?
 }
